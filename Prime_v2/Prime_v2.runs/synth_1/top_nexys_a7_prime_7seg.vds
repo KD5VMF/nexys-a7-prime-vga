@@ -1,0 +1,393 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Sep 20 02:34:32 2025
+# Process ID: 26808
+# Current directory: /home/sysop/Prime_v2/Prime_v2.runs/synth_1
+# Command line: vivado -log top_nexys_a7_prime_7seg.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_nexys_a7_prime_7seg.tcl
+# Log file: /home/sysop/Prime_v2/Prime_v2.runs/synth_1/top_nexys_a7_prime_7seg.vds
+# Journal file: /home/sysop/Prime_v2/Prime_v2.runs/synth_1/vivado.jou
+# Running On: T480, OS: Linux, CPU Frequency: 924.433 MHz, CPU Physical cores: 4, Host memory: 25081 MB
+#-----------------------------------------------------------
+source top_nexys_a7_prime_7seg.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/sysop/Prime_v2/Prime_v2.srcs/utils_1/imports/synth_1/top_nexys_a7_prime_7seg.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/sysop/Prime_v2/Prime_v2.srcs/utils_1/imports/synth_1/top_nexys_a7_prime_7seg.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_nexys_a7_prime_7seg -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26852
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2638.312 ; gain = 0.000 ; free physical = 9191 ; free virtual = 14787
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_nexys_a7_prime_7seg' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:7]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [/home/sysop/tools/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:55203]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [/home/sysop/tools/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:55203]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [/home/sysop/tools/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:63629]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 31.500000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 25.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 2 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_DIVIDE bound to: 2 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_DIVIDE bound to: 2 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_DIVIDE bound to: 2 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_DIVIDE bound to: 2 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT6_DIVIDE bound to: 2 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [/home/sysop/tools/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:63629]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+WARNING: [Synth 8-7071] port 'CLKOUT1' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+WARNING: [Synth 8-7071] port 'CLKOUT2' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+WARNING: [Synth 8-7071] port 'CLKOUT3' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'u_mmcm' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+WARNING: [Synth 8-7023] instance 'u_mmcm' of module 'MMCME2_BASE' has 18 connections declared, but only 7 given [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:46]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/sysop/tools/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/home/sysop/tools/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6157] synthesizing module 'vga_640x480_timing' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/vga_640x480_timing.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'vga_640x480_timing' (0#1) [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/vga_640x480_timing.v:2]
+INFO: [Synth 8-6157] synthesizing module 'prime_finder_seq' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/prime_finder_seq.v:6]
+	Parameter WIDTH bound to: 27 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'prime_finder_seq' (0#1) [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/prime_finder_seq.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bcd_convert_dd' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/bcd_convert_dd.v:2]
+	Parameter BIN_WIDTH bound to: 27 - type: integer 
+	Parameter DIGITS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bcd_convert_dd' (0#1) [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/bcd_convert_dd.v:2]
+INFO: [Synth 8-6157] synthesizing module 'text_overlay_prime' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/text_overlay_prime.v:5]
+	Parameter DIGITS bound to: 8 - type: integer 
+	Parameter TITLE_ROW bound to: 5'b00001 
+	Parameter TITLE_COL0 bound to: 7'b0011110 
+	Parameter TITLE_LEN bound to: 7'b0010011 
+	Parameter PRIME_ROW bound to: 5'b00011 
+	Parameter PRIME_COL0 bound to: 7'b0100100 
+	Parameter AUTO_CENTER bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'font8x16' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/font8x16.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'font8x16' (0#1) [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/font8x16.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'text_overlay_prime' (0#1) [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/text_overlay_prime.v:5]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_mux' [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/sevenseg_mux.v:1]
+	Parameter DIGITS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_mux' (0#1) [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/sevenseg_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top_nexys_a7_prime_7seg' (0#1) [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/top_nexys_a7_prime_7seg.v:7]
+WARNING: [Synth 8-6014] Unused sequential element bcd_next_reg was removed.  [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/src/bcd_convert_dd.v:36]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2638.312 ; gain = 0.000 ; free physical = 10325 ; free virtual = 15922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2638.312 ; gain = 0.000 ; free physical = 10324 ; free virtual = 15921
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2638.312 ; gain = 0.000 ; free physical = 10324 ; free virtual = 15921
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2638.312 ; gain = 0.000 ; free physical = 10316 ; free virtual = 15913
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/constraints/nexys_a7_vga_only.xdc]
+Finished Parsing XDC File [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/constraints/nexys_a7_vga_only.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/sysop/Downloads/Good/nexys_a7_vga_prime_with_7seg_autofetch_v6/constraints/nexys_a7_vga_only.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_nexys_a7_prime_7seg_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_nexys_a7_prime_7seg_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2702.340 ; gain = 0.000 ; free physical = 10237 ; free virtual = 15833
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2702.340 ; gain = 0.000 ; free physical = 10237 ; free virtual = 15833
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10307 ; free virtual = 15903
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10307 ; free virtual = 15903
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10307 ; free virtual = 15903
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'prime_finder_seq'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                  S_TEST |                               01 |                               01
+                   S_REM |                               10 |                               10
+                  S_NEXT |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'prime_finder_seq'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10298 ; free virtual = 15895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   54 Bit       Adders := 1     
+	   3 Input   28 Bit       Adders := 1     
+	   2 Input   27 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 7     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               28 Bit    Registers := 1     
+	               27 Bit    Registers := 6     
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   28 Bit        Muxes := 1     
+	   4 Input   28 Bit        Muxes := 1     
+	   4 Input   27 Bit        Muxes := 3     
+	   2 Input   27 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	  16 Input    7 Bit        Muxes := 24    
+	  22 Input    7 Bit        Muxes := 1     
+	   9 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	  16 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	  16 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 28    
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 12    
+	   4 Input    1 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP d_sq, operation Mode is: A*B.
+DSP Report: operator d_sq is absorbed into DSP d_sq.
+DSP Report: operator d_sq is absorbed into DSP d_sq.
+DSP Report: Generating DSP d_sq, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator d_sq is absorbed into DSP d_sq.
+DSP Report: operator d_sq is absorbed into DSP d_sq.
+DSP Report: Generating DSP d_sq, operation Mode is: A*B.
+DSP Report: operator d_sq is absorbed into DSP d_sq.
+DSP Report: operator d_sq is absorbed into DSP d_sq.
+DSP Report: Generating DSP d_sq, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator d_sq is absorbed into DSP d_sq.
+DSP Report: operator d_sq is absorbed into DSP d_sq.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10276 ; free virtual = 15877
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|prime_finder_seq | A*B            | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|prime_finder_seq | (PCIN>>17)+A*B | 11     | 11     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|prime_finder_seq | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|prime_finder_seq | (PCIN>>17)+A*B | 18     | 11     | -      | -      | 37     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10121 ; free virtual = 15723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10112 ; free virtual = 15713
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10108 ; free virtual = 15710
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10157 ; free virtual = 15754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10157 ; free virtual = 15754
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10160 ; free virtual = 15756
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10160 ; free virtual = 15756
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10160 ; free virtual = 15756
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10160 ; free virtual = 15756
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|prime_finder_seq | A*B'           | 17     | 10     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|prime_finder_seq | PCIN>>17+A'*B' | 10     | 10     | -      | -      | 20     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prime_finder_seq | A*B            | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|prime_finder_seq | PCIN>>17+A*B'  | 17     | 10     | -      | -      | 37     | 0    | 1    | -    | -    | -     | 0    | 0    | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     2|
+|2     |CARRY4      |    53|
+|3     |DSP48E1     |     4|
+|6     |LUT1        |     8|
+|7     |LUT2        |   188|
+|8     |LUT3        |    95|
+|9     |LUT4        |   201|
+|10    |LUT5        |    97|
+|11    |LUT6        |   153|
+|12    |MMCME2_BASE |     1|
+|13    |MUXF7       |     8|
+|14    |FDRE        |   363|
+|15    |FDSE        |    20|
+|16    |IBUF        |     1|
+|17    |OBUF        |    30|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10160 ; free virtual = 15756
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2702.340 ; gain = 0.000 ; free physical = 10222 ; free virtual = 15819
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2702.340 ; gain = 64.027 ; free physical = 10222 ; free virtual = 15819
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2702.340 ; gain = 0.000 ; free physical = 10219 ; free virtual = 15815
+INFO: [Netlist 29-17] Analyzing 66 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2702.340 ; gain = 0.000 ; free physical = 10254 ; free virtual = 15851
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete, checksum: 5f8f7756
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 2702.340 ; gain = 64.031 ; free physical = 10486 ; free virtual = 16082
+INFO: [Common 17-1381] The checkpoint '/home/sysop/Prime_v2/Prime_v2.runs/synth_1/top_nexys_a7_prime_7seg.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_nexys_a7_prime_7seg_utilization_synth.rpt -pb top_nexys_a7_prime_7seg_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 20 02:35:15 2025...

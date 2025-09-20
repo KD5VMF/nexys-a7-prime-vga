@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x003A607B    Sep 20 02:37:29 2025    /home/sysop/Prime_v2/Prime_v2.runs/impl_1/top_nexys_a7_prime_7seg.bit
