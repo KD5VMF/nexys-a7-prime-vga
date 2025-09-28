@@ -1,0 +1,70 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Sat Sep 27 21:42:42 2025
+| Host         : T480 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_methodology -file top_nexys_a7_rtc_vga_bounce_methodology_drc_routed.rpt -pb top_nexys_a7_rtc_vga_bounce_methodology_drc_routed.pb -rpx top_nexys_a7_rtc_vga_bounce_methodology_drc_routed.rpx
+| Design       : top_nexys_a7_rtc_vga_bounce
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 5
++--------+----------+------------------------------------------+------------+
+| Rule   | Severity | Description                              | Violations |
++--------+----------+------------------------------------------+------------+
+| XDCH-2 | Warning  | Same min and max delay values on IO port | 5          |
++--------+----------+------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+XDCH-2#1 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'btnC' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks sys_clk_pin] -max 0.000 [get_ports {btnC btnU btnD btnL btnR}]
+/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc (Line: 43)
+Related violations: <none>
+
+XDCH-2#2 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'btnD' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks sys_clk_pin] -max 0.000 [get_ports {btnC btnU btnD btnL btnR}]
+/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc (Line: 43)
+Related violations: <none>
+
+XDCH-2#3 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'btnL' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks sys_clk_pin] -max 0.000 [get_ports {btnC btnU btnD btnL btnR}]
+/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc (Line: 43)
+Related violations: <none>
+
+XDCH-2#4 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'btnR' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks sys_clk_pin] -max 0.000 [get_ports {btnC btnU btnD btnL btnR}]
+/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc (Line: 43)
+Related violations: <none>
+
+XDCH-2#5 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'btnU' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks sys_clk_pin] -max 0.000 [get_ports {btnC btnU btnD btnL btnR}]
+/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc (Line: 43)
+Related violations: <none>
+
+

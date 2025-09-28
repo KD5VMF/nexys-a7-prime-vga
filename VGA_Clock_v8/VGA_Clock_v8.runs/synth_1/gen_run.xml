@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1759027248">
+  <File Type="VDS-TIMINGSUMMARY" Name="top_nexys_a7_rtc_vga_bounce_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="top_nexys_a7_rtc_vga_bounce.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="top_nexys_a7_rtc_vga_bounce_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="top_nexys_a7_rtc_vga_bounce_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_nexys_a7_rtc_vga_bounce_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="top_nexys_a7_rtc_vga_bounce.vds"/>
+  <File Type="REPORTS-TCL" Name="top_nexys_a7_rtc_vga_bounce_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="top_nexys_a7_rtc_vga_bounce_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="top_nexys_a7_rtc_vga_bounce.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/debounce.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/font8x16_digits.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/pclk_div.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/rtc_core.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/tick_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/vga_sync.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/vga_text_clock_dyn.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/top_nexys_a7_rtc_vga_bounce.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="top_nexys_a7_rtc_vga_bounce"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

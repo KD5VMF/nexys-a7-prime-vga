@@ -1,0 +1,311 @@
+
+*** Running vivado
+    with args -log top_nexys_a7_rtc_vga_bounce.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_nexys_a7_rtc_vga_bounce.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_nexys_a7_rtc_vga_bounce.tcl -notrace
+Command: synth_design -top top_nexys_a7_rtc_vga_bounce -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12668
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2642.316 ; gain = 0.000 ; free physical = 8310 ; free virtual = 15521
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_nexys_a7_rtc_vga_bounce' [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/top_nexys_a7_rtc_vga_bounce.v:2]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/debounce.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (0#1) [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/debounce.v:2]
+INFO: [Synth 8-6157] synthesizing module 'tick_gen' [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/tick_gen.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'tick_gen' (0#1) [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/tick_gen.v:2]
+INFO: [Synth 8-6157] synthesizing module 'rtc_core' [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/rtc_core.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'rtc_core' (0#1) [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/rtc_core.v:2]
+INFO: [Synth 8-6157] synthesizing module 'pclk_div' [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/pclk_div.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'pclk_div' (0#1) [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/pclk_div.v:2]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/sysop/tools/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/home/sysop/tools/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6157] synthesizing module 'vga_sync' [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/vga_sync.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'vga_sync' (0#1) [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/vga_sync.v:2]
+INFO: [Synth 8-6157] synthesizing module 'vga_text_clock_dyn' [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/vga_text_clock_dyn.v:2]
+	Parameter SCALE bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'font8x16_digits' [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/font8x16_digits.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'font8x16_digits' (0#1) [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/font8x16_digits.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'vga_text_clock_dyn' (0#1) [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/vga_text_clock_dyn.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'top_nexys_a7_rtc_vga_bounce' (0#1) [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/top_nexys_a7_rtc_vga_bounce.v:2]
+WARNING: [Synth 8-6014] Unused sequential element B_reg was removed.  [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/vga_text_clock_dyn.v:54]
+WARNING: [Synth 8-6014] Unused sequential element nx_reg was removed.  [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/top_nexys_a7_rtc_vga_bounce.v:80]
+WARNING: [Synth 8-6014] Unused sequential element ny_reg was removed.  [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/src/top_nexys_a7_rtc_vga_bounce.v:81]
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[6] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[5] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[4] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[3] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[2] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[1] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[0] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port dp driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[7] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[6] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[5] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[4] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[3] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[2] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[1] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[0] driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2642.316 ; gain = 0.000 ; free physical = 9411 ; free virtual = 16623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2642.316 ; gain = 0.000 ; free physical = 9410 ; free virtual = 16622
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2642.316 ; gain = 0.000 ; free physical = 9410 ; free virtual = 16622
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2642.316 ; gain = 0.000 ; free physical = 9402 ; free virtual = 16614
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc]
+WARNING: [Vivado 12-508] No pins matched '*dbC*/s0_reg/D'. [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc:35]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_pins -hier *dbC*/s0_reg/D]'. [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc:35]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched '*dbU*/s0_reg/D'. [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc:36]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_pins -hier *dbU*/s0_reg/D]'. [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc:36]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched '*dbD*/s0_reg/D'. [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc:37]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_pins -hier *dbD*/s0_reg/D]'. [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc:37]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched '*dbL*/s0_reg/D'. [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc:38]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_pins -hier *dbL*/s0_reg/D]'. [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc:38]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched '*dbR*/s0_reg/D'. [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc:39]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_pins -hier *dbR*/s0_reg/D]'. [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc:39]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/sysop/Downloads/NexysA7_RTC_VGA_Saver_FULL_TIMINGFIX/constr/nexys_a7_100t_vga_bounce.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_nexys_a7_rtc_vga_bounce_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_nexys_a7_rtc_vga_bounce_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2706.344 ; gain = 0.000 ; free physical = 9320 ; free virtual = 16532
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2706.344 ; gain = 0.000 ; free physical = 9320 ; free virtual = 16532
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9393 ; free virtual = 16601
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9393 ; free virtual = 16601
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9393 ; free virtual = 16601
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9384 ; free virtual = 16592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   27 Bit       Adders := 1     
+	   2 Input   21 Bit       Adders := 5     
+	   2 Input   12 Bit       Adders := 6     
+	   2 Input   10 Bit       Adders := 2     
+	   3 Input   10 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 16    
+	   2 Input    3 Bit       Adders := 3     
+	   3 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	               21 Bit    Registers := 5     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 6     
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   2 Input   27 Bit        Muxes := 1     
+	   2 Input   21 Bit        Muxes := 5     
+	   2 Input   12 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 2     
+	   4 Input   10 Bit        Muxes := 2     
+	   3 Input    9 Bit        Muxes := 2     
+	  16 Input    7 Bit        Muxes := 10    
+	  16 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 255   
+	   3 Input    4 Bit        Muxes := 46    
+	   2 Input    3 Bit        Muxes := 16    
+	   2 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[6] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[5] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[4] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[3] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[2] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[1] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port seg[0] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port dp driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[7] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[6] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[5] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[4] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[3] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[2] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[1] driven by constant 1
+WARNING: [Synth 8-3917] design top_nexys_a7_rtc_vga_bounce has port an[0] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9396 ; free virtual = 16610
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9279 ; free virtual = 16493
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9251 ; free virtual = 16465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9250 ; free virtual = 16464
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9250 ; free virtual = 16463
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9250 ; free virtual = 16463
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9250 ; free virtual = 16463
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9250 ; free virtual = 16463
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9251 ; free virtual = 16465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9251 ; free virtual = 16465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    60|
+|3     |LUT1   |    61|
+|4     |LUT2   |   171|
+|5     |LUT3   |    35|
+|6     |LUT4   |    67|
+|7     |LUT5   |    84|
+|8     |LUT6   |   160|
+|9     |MUXF7  |     2|
+|10    |FDRE   |   254|
+|11    |IBUF   |     6|
+|12    |OBUF   |    30|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9251 ; free virtual = 16465
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2706.344 ; gain = 0.000 ; free physical = 9303 ; free virtual = 16517
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2706.344 ; gain = 64.027 ; free physical = 9303 ; free virtual = 16517
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2706.344 ; gain = 0.000 ; free physical = 9298 ; free virtual = 16512
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2706.344 ; gain = 0.000 ; free physical = 9333 ; free virtual = 16547
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 3da90a3e
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 41 Warnings, 5 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:38 . Memory (MB): peak = 2706.344 ; gain = 64.031 ; free physical = 9563 ; free virtual = 16776
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/sysop/Digilent Projects/VGA_Clock_v8/VGA_Clock_v8.runs/synth_1/top_nexys_a7_rtc_vga_bounce.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_nexys_a7_rtc_vga_bounce_utilization_synth.rpt -pb top_nexys_a7_rtc_vga_bounce_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 27 21:41:36 2025...

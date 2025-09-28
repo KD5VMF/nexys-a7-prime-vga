@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Sep 27 21:40:50 2025
+# Process ID: 12648
+# Current directory: /home/sysop/Digilent Projects/VGA_Clock_v8/VGA_Clock_v8.runs/synth_1
+# Command line: vivado -log top_nexys_a7_rtc_vga_bounce.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_nexys_a7_rtc_vga_bounce.tcl
+# Log file: /home/sysop/Digilent Projects/VGA_Clock_v8/VGA_Clock_v8.runs/synth_1/top_nexys_a7_rtc_vga_bounce.vds
+# Journal file: /home/sysop/Digilent Projects/VGA_Clock_v8/VGA_Clock_v8.runs/synth_1/vivado.jou
+# Running On: T480, OS: Linux, CPU Frequency: 1453.342 MHz, CPU Physical cores: 4, Host memory: 25081 MB
+#-----------------------------------------------------------
+source top_nexys_a7_rtc_vga_bounce.tcl -notrace

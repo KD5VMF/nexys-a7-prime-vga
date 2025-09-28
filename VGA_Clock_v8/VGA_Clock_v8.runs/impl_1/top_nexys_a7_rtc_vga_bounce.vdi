@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Sep 27 21:45:31 2025
+# Process ID: 19520
+# Current directory: /home/sysop/Digilent Projects/VGA_Clock_v8/VGA_Clock_v8.runs/impl_1
+# Command line: vivado -log top_nexys_a7_rtc_vga_bounce.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_nexys_a7_rtc_vga_bounce.tcl -notrace
+# Log file: /home/sysop/Digilent Projects/VGA_Clock_v8/VGA_Clock_v8.runs/impl_1/top_nexys_a7_rtc_vga_bounce.vdi
+# Journal file: /home/sysop/Digilent Projects/VGA_Clock_v8/VGA_Clock_v8.runs/impl_1/vivado.jou
+# Running On: T480, OS: Linux, CPU Frequency: 2970.632 MHz, CPU Physical cores: 4, Host memory: 25081 MB
+#-----------------------------------------------------------
+source top_nexys_a7_rtc_vga_bounce.tcl -notrace
+Command: open_checkpoint top_nexys_a7_rtc_vga_bounce_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2641.262 ; gain = 5.938 ; free physical = 8952 ; free virtual = 16174
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:nexys-a7-100t:part0:1.2. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:nexys-a7-100t:part0:1.2. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2643.281 ; gain = 0.000 ; free physical = 9578 ; free virtual = 16800
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2707.309 ; gain = 0.000 ; free physical = 9067 ; free virtual = 16284
+Restored from archive | CPU: 0.120000 secs | Memory: 2.149269 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2707.309 ; gain = 0.000 ; free physical = 9067 ; free virtual = 16284
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2707.309 ; gain = 0.000 ; free physical = 9067 ; free virtual = 16284
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.1 (64-bit) build 3526262
+open_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2707.309 ; gain = 77.922 ; free physical = 9066 ; free virtual = 16283
+Command: write_bitstream -force top_nexys_a7_rtc_vga_bounce.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/sysop/tools/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./top_nexys_a7_rtc_vga_bounce.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+22 Infos, 0 Warnings, 2 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3153.316 ; gain = 446.008 ; free physical = 9017 ; free virtual = 16230
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 27 21:46:00 2025...
