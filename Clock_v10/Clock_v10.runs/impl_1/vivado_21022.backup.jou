@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Sep 27 19:33:01 2025
+# Process ID: 21022
+# Current directory: /home/sysop/Digilent Projects/Clock_v10/Clock_v10.runs/impl_1
+# Command line: vivado -log top_nexys_a7_rtc.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_nexys_a7_rtc.tcl -notrace
+# Log file: /home/sysop/Digilent Projects/Clock_v10/Clock_v10.runs/impl_1/top_nexys_a7_rtc.vdi
+# Journal file: /home/sysop/Digilent Projects/Clock_v10/Clock_v10.runs/impl_1/vivado.jou
+# Running On: T480, OS: Linux, CPU Frequency: 3585.133 MHz, CPU Physical cores: 4, Host memory: 25081 MB
+#-----------------------------------------------------------
+source top_nexys_a7_rtc.tcl -notrace
