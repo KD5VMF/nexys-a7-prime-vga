@@ -1,189 +1,127 @@
+# Nexys A7 — Prime + Clocks (VGA + 7‑seg)
 
-# Nexys A7 Prime VGA
+A collection of **clean, working Vivado 2022.1** designs for the **Digilent Nexys A7‑100T (XC7A100T‑CSG324‑1)**:
 
-A complete, timing-clean VGA demo for the **Digilent Nexys A7-100T** (XC7A100T) that:
-- Finds primes continuously in hardware.
-- Shows the latest prime **once per second** on both VGA and 7-segment.
-- Renders a centered, bright-green title (2× scaled) and centered `PRIME: XXXXXXXX` line.
-- Removes leading zeros on both VGA and 7-segment.
-- Uses a **single clock domain** derived from 100 MHz → **~25.2 MHz** pixel clock via **MMCME2**, so timing is easy.
+- **Prime_v2** — 640×480 VGA prime demo with 7‑seg mirror (single ~25.2 MHz pixel clock domain).
+- **Clock_v10** — Real‑time clock on the **8‑digit 7‑segment** display (five‑button UI, blinking colon).
+- **VGA_Clock_v8** — Big, bright‑green time on **VGA** with a screensaver‑style **bouncing** motion; 7‑seg is disabled.
 
-> Targeted and tested with **Vivado 2022.1**.
+All projects are self‑contained RTL (Verilog‑2001) + XDC and have been tested on Nexys A7‑100T with Vivado 2022.1.
 
 ---
 
-## Features
+## Repository layout
 
-- **Prime searcher** (`prime_finder_seq.v`) using restoring division.  
-  - Width = **27 bits** (supports numbers up to 99,999,999).
-  - Rolls over to 3 after hitting **99,999,999**.
-  - Emits `2` exactly once after reset, then odd primes.
-- **1 Hz UI pacing**: finder runs continuously, but the UI (VGA/7-seg) updates once/second to the **latest prime**.
-- **VGA overlay** (`text_overlay_prime.v`):
-  - 640×480 @ 60 Hz timing (`vga_640x480_timing.v`).
-  - Title is **2×** (16×32), centered.
-  - `PRIME: XXXXXXXX` is centered below the title.
-  - **Bright green** text; easy to tweak.
-  - Treats BCD nibble `4'hF` as **blank** (no leading zeros).
-- **Seven-seg**: mirrors the same BCD digits; assumes `4'hF` blanks a digit in your decoder.
-- **Single clock domain @ ~25.200 MHz** pixel clock using **MMCME2** (no Clocking Wizard IP required).  
-  If you prefer exact **25.175 MHz**, see “Exact 25.175 MHz” below.
+```
+.
+├── Clock_v10/                     # 7‑segment RTC (buttons: C/U/D/L/R)
+├── VGA_Clock_v8/                  # VGA clock (bright green, bounces; 7‑seg off)
+├── Prime_v2/                      # Original prime‑finder VGA demo with 7‑seg mirror
+└── nexys_a7_hello_vga_640x480/    # Minimal VGA timing hello (reference)
+```
+
+Each subfolder contains:
+- `src/` — synthesizable RTL
+- `constr/` — XDC constraints for the Nexys A7 (100 MHz clock + pinout)
+- (some folders include `build/` Tcl helpers for a one‑click project)
 
 ---
 
 ## Hardware
 
-- Board: **Digilent Nexys A7-100T**
-- FPGA: **XC7A100T-CSG324-1**
-- System clock: 100 MHz on-board oscillator
-- Configuration flash: **S25FL128S** (128 Mbit, Quad-SPI capable)
-- VGA output: 640×480 @ 60 Hz
-
----
-
-## Toolchain / Software
-
-- **Xilinx Vivado 2022.1**
-  - Synthesis, implementation, bitstream, HW Manager
-  - (Optional) Memory Configuration File Generator (for QSPI MCS/BIN)
-- No other external tools required.
-
----
-
-## Repo layout
-
-```
-.
-├── src/
-│   ├── top_nexys_a7_prime_7seg.v        # Top-level (single 25.2 MHz domain)
-│   ├── prime_finder_seq.v               # 27-bit, rollover at 99,999,999
-│   ├── vga_640x480_timing.v             # 640×480@60 timing generator
-│   ├── text_overlay_prime.v             # 2× title, centered, bright green
-│   ├── font8x16.v                       # 8×16 bitmap font ROM
-│   ├── sevenseg_mux.v                   # 7-seg scan; treat 4'hF as blank
-│   └── bcd_convert_dd.v                 # Binary→BCD (param BIN_WIDTH/DIGITS)
-└── constr/
-    └── nexys_a7_vga.xdc                 # Pinout + 100 MHz board clock
-```
-
-> If you already have your own `sevenseg_mux.v` and `bcd_convert_dd.v`, keep them—just ensure they match the signals and params used here (see “Integration notes”).
+- **Board**: Digilent Nexys A7‑100T
+- **FPGA**: XC7A100T‑CSG324‑1
+- **System clock**: 100 MHz onboard oscillator
+- **Video**: VGA 640×480 @ 60 Hz (12‑bit RGB via resistor ladder DAC)
+- **Inputs**: 5 push buttons (BTNC/BTNU/BTND/BTNL/BTNR)
 
 ---
 
 ## Build (Vivado 2022.1)
 
-1. **Create a new RTL project** (no board preset required).
-2. **Add Sources** → add everything under `src/`.
-3. **Add Constraints** → add `constr/nexys_a7_vga.xdc`.  
-   Make sure it has:
-   - A `create_clock` on the 100 MHz input pin.
-   - Correct VGA pin mappings for HS/VS/R/G/B nibble pins.
-   - 7-segment and AN pin mappings.
-4. **Set Top**: `top_nexys_a7_prime_7seg`.
-5. **Synthesize → Implement → Generate Bitstream`.
+> Repeat these steps for the subproject you want (e.g., `VGA_Clock_v8`).
 
-You should get clean timing (single ~25.2 MHz clock domain). If not, check that the XDC clock constraint is present and correct.
+1. **Create RTL project** (no board preset required). Target device: `xc7a100tcsg324-1`.
+2. **Add Sources** → add everything from the project’s `src/` directory.
+3. **Add Constraints** → add the XDC under `constr/` for that project.
+   - Make sure the XDC has a `create_clock` for the 100 MHz pin **E3** and the correct VGA + 7‑seg pins.
+4. **Set Top** to the project’s top module (see its `src/`).
+5. **Synthesize → Implement → Generate Bitstream**.
+6. **Program** (see next section).
 
----
-
-## Program the FPGA (volatile)
-
-1. Open **Hardware Manager** → Open Target → Auto Connect.
-2. **Program Device** → choose the generated `.bit`.
+> Tips:
+> - Projects use a single, low‑frequency pixel clock domain (~25 MHz) for timing simplicity.
+> - VGA text renderers use an 8×16 font (scaled).
+> - 7‑seg decoder treats `4'hF` as a blank (no segment lit).
 
 ---
 
-## Program QSPI flash (non-volatile)
+## Run it on the board
 
-Two steps:
-1) Generate the memory image (MCS/BIN).  
-2) Write it into the S25FL128S device.
+### A) Program the FPGA (volatile, via JTAG/USB)
+- Open **Hardware Manager** → *Open Target → Auto Connect* → *Program Device* with the `.bit` file.
+- Works immediately, but the design is **lost on power‑off**.
 
-### A) Generate MCS (Quad-SPI, SPIx4)
+### B) Program Quad‑SPI Flash (non‑volatile, from power‑up)
+1. **Generate MCS/BIN**: *File → Generate Memory Configuration File…*
+   - Format: **MCS**
+   - Device/Interface: **s25fl128s** / **SPIx4**
+   - Load your `*.bit`, output e.g. `project.mcs`
+2. **Write to flash**: *Hardware Manager → Add Configuration Memory Device…*
+   - Pick `s25fl128s`, point to `project.mcs`, Erase/Program/Verify
+3. Set the mode jumper(s) for **QSPI** boot and power‑cycle. Your design now loads at reset.
 
-Your bitstream is already compatible. Use the GUI:
-
-- **File → Generate Memory Configuration File…**
-  - **Format**: `MCS`
-  - **Memory Part**: `s25fl128s-spi-x1_x2_x4`
-  - **Interface**: `SPIx4`
-  - **Load bitstream**: your `top_nexys_a7_prime_7seg.bit`
-  - Output file name (e.g., `prime_demo.mcs`)
-  - Check “Overwrite” if re-generating.
-
-Or Tcl:
-
-```tcl
-write_cfgmem -force -format mcs -size 16   -interface SPIx4   -loadbit "up 0x00000000 ./top_nexys_a7_prime_7seg.bit"   -file ./prime_demo.mcs
-```
-
-> If you ever need SPIx1 instead, you must set `BITSTREAM.CONFIG.SPI_BUSWIDTH 1` **before** generating the bitstream, then use `-interface SPIx1` for `write_cfgmem`. For SPIx4 (recommended), ensure `SPI_BUSWIDTH = 4`.
-
-### B) Write to flash
-
-- Set the board’s mode jumpers to **QSPI** (see Digilent manual).
-- In **Hardware Manager**: **Add Configuration Memory Device…**
-  - Select `s25fl128s` (or compatible).
-  - Choose your `prime_demo.mcs`.
-  - **Erase**, **Program**, **Verify**.
-- Power-cycle. The FPGA will now boot from QSPI.
+### C) Configure from **USB flash drive** or **microSD card** (no PC required)
+- Format the device as **FAT32**.
+- Copy **one** `*.bit` file into the **root** of the drive/card.
+- On the Nexys A7:
+  - Set the **Programming Mode** jumper to **USB/SD**.
+  - Use the **select jumper** to choose **USB** vs **SD**.
+  - Press **PROG** or power‑cycle. The on‑board microcontroller streams the bitstream to the FPGA.
+- If the status LED indicates an error, check the device selection, FAT32 formatting, and that the bitstream targets **XC7A100T**.
 
 ---
 
-## Exact 25.175 MHz (optional)
+## Project notes
 
-This project uses an **MMCME2** to produce **~25.200 MHz** (within 0.1%; works on typical displays).  
-If you want **exact 25.175 MHz**, you can:
+### `Clock_v10` — 7‑segment RTC
+- **UI**: `BTN_C` toggles **set mode**; `BTN_L/BTN_R` select field (HH/MM/SS); `BTN_U/BTN_D` inc/dec.
+- **Display**: 8‑digit 7‑seg + blinking colon (DP).
+- **Timing**: 1 Hz tick from the 100 MHz clock; the colon blinks at 1 Hz.
 
-- Add a **Clocking Wizard** IP (from IP Catalog):
-  - Input: 100 MHz
-  - Output0: **25.175 MHz**
-  - Replace the MMCME2 instance in `top_nexys_a7_prime_7seg.v` with the Wizard’s module (or keep MMCME2 and add a second output if you prefer).
-- Everything else stays the same.
+### `VGA_Clock_v8` — VGA bouncing clock
+- **Output**: bright‑green `HH:MM:SS` on a black background.
+- **Motion**: updates once per second; **reflect‑and‑clamp** screensaver bounce (no wrap‑through).
+- **Seven‑seg**: ports remain, but driven **OFF** in RTL so only VGA shows the time.
 
----
-
-## Integration notes
-
-- **sevenseg_mux.v**: Ensure the nibble decoder blanks on `4'hF` (all segments off). Example:
-
-  ```verilog
-  case (nibble)
-    4'h0: seg = 7'b1000000;
-    // ...
-    4'h9: seg = 7'b0010000;
-    4'hF: seg = 7'b1111111; // blank
-    default: seg = 7'b1111111;
-  endcase
-  ```
-
-- **text_overlay_prime.v**: Already skips drawing when a BCD nibble is `4'hF`, so VGA has no leading zeros.
-- **bcd_convert_dd.v**: Use `#(.BIN_WIDTH(27), .DIGITS(8))` to match our width and 8-digit display.  
-- **prime_finder_seq.v**: Parameter `WIDTH=27` and roll-over at 99,999,999 are already included.
+### `Prime_v2` — VGA prime finder
+- Fast odd‑only search with restoring division.
+- **UI pacing**: 1 Hz update of the displayed value; removes leading zeros on VGA & 7‑seg.
+- **Clocking**: single ~25.2 MHz pixel clock via MMCME2 for simple timing.
 
 ---
 
-## Troubleshooting
+## Known‑good pinout (summary)
 
-- **“module not found” for Clocking Wizard**  
-  This repo **does not** require a Clocking Wizard IP; it uses **MMCME2_BASE** directly. If you swap to Clocking Wizard, be sure to generate the IP and include it in the project.
-- **Timing 38-282**  
-  Make sure you are truly running everything in the **single ~25.2 MHz domain** from the MMCME2 output (no 100 MHz fabric left over). Confirm your XDC has the 100 MHz `create_clock`.
-- **QSPI generation errors**  
-  - `SMAPX8 is not compatible…`: choose **SPIx4** in `write_cfgmem`.
-  - `SPI_BUSWIDTH property is set to 4…`: use **SPIx4** (or rebuild bitstream for SPIx1 if you insist).
-  - “Cannot overwrite … .prm”: add `-force` or choose a new output filename.
+- **Clock**: `clk100mhz` → **E3**, `IOSTANDARD LVCMOS33`
+- **Buttons**: `btnC` N17, `btnU` M18, `btnD` P18, `btnL` P17, `btnR` M17
+- **VGA**:
+  - **HS** B11, **VS** B12
+  - **R[3:0]** A4 C5 B4 A3
+  - **G[3:0]** A6 B6 A5 C6
+  - **B[3:0]** D8 D7 C7 B7
+- **7‑seg**: `seg[6:0]` T10 R10 K16 K13 P15 T11 L18; `dp` H15; `an[7:0]` J17 J18 T9 J14 P14 T14 K2 U13
+
+> The full XDCs in each project contain the exact `set_property` lines and the 100 MHz `create_clock`.
 
 ---
 
 ## License
 
-MIT
-
----
+MIT for the HDL in this repo unless otherwise noted.
 
 ## Credits
 
-- Digilent Nexys A7 (Artix-7) platform.
-- Xilinx Vivado 2022.1.
-- 8×16 font ROM; standard 640×480 porch/sync timings.
+- Board: Digilent **Nexys A7‑100T**
+- Tools: AMD/Xilinx **Vivado 2022.1**
+- Thanks to the FPGA community for VGA timing references and clean constraint patterns.
